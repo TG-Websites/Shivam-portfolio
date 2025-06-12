@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Shivam Jha - Founder & CEO of ThunderGit. Tech Visionary & Entrepreneur specializing in version control and collaborative development."
+    />
+    <meta
+      name="keywords"
+      content="Shivam Jha, ThunderGit, Software Engineer, Entrepreneur, Full Stack Developer"
+    />
+    <meta
+      property="og:title"
+      content="Shivam Jha - Tech Visionary & Entrepreneur"
+    />
+    <meta
+      property="og:description"
+      content="Transforming the world of version control and collaborative development"
+    />
+    <meta property="og:type" content="website" />
+    <title>Shivam Jha - Founder & Tech Visionary</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="manifest"
+      href="data:application/json,{%22name%22:%22Shivam%20Jha%20Portfolio%22,%22short_name%22:%22ShivamJha%22,%22start_url%22:%22/%22,%22display%22:%22standalone%22,%22background_color%22:%22%23111827%22,%22theme_color%22:%22%23ffffff%22}"
+    />
+  <link rel="stylesheet" href="shivam.css">
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glass-effect">
+      <div class="container mx-auto px-6 py-4">
+        <div class="flex justify-between items-center">
+          <div class="flex items-center space-x-3">
+            <div class="text-xl font-bold" style="color: var(--text-primary)">
+              Shivam<span style="color: var(--text-tertiary)">.dev</span>
+            </div>
+          </div>
+          <div class="hidden md:flex space-x-8">
+            <a href="#home" class="hover:opacity-70 transition-opacity">Home</a>
+            <a href="#about" class="hover:opacity-70 transition-opacity"
+              >About</a
+            >
+            <a href="#projects" class="hover:opacity-70 transition-opacity"
+              >Projects</a
+            >
+            <a href="#experience" class="hover:opacity-70 transition-opacity"
+              >Experience</a
+            >
+            <a href="#testimonials" class="hover:opacity-70 transition-opacity"
+              >Testimonials</a
+            >
+            <a href="#blog" class="hover:opacity-70 transition-opacity">Blog</a>
+            <a href="#contact" class="hover:opacity-70 transition-opacity"
+              >Contact</a
+            >
+          </div>
+          <div class="flex items-center space-x-4">
+            <!-- Theme Toggle -->
+            <button
+              id="theme-toggle"
+              class="p-2 rounded-lg hover:bg-gray-700 transition-colors"
+            >
+              <svg
+                class="w-5 h-5 theme-icon-sun hidden"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <svg
+                class="w-5 h-5 theme-icon-moon"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+                ></path>
+              </svg>
+            </button>
+            <div class="md:hidden">
+              <button id="menu-btn" style="color: var(--text-primary)">
+                <svg
+                  class="w-6 h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div
+      id="mobile-menu"
+      class="mobile-menu fixed top-0 right-0 h-full w-80 z-40 p-6"
+      style="background-color: var(--bg-secondary)"
+    >
+      <div class="flex justify-end mb-8">
+        <button id="close-menu" class="p-2">
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            ></path>
+          </svg>
+        </button>
+      </div>
+      <div class="space-y-6">
+        <a href="#home" class="block py-2 text-lg mobile-nav-link">Home</a>
+        <a href="#about" class="block py-2 text-lg mobile-nav-link">About</a>
+        <a href="#projects" class="block py-2 text-lg mobile-nav-link"
+          >Projects</a
+        >
+        <a href="#experience" class="block py-2 text-lg mobile-nav-link"
+          >Experience</a
+        >
+        <a href="#testimonials" class="block py-2 text-lg mobile-nav-link"
+          >Testimonials</a
+        >
+        <a href="#blog" class="block py-2 text-lg mobile-nav-link">Blog</a>
+        <a href="#contact" class="block py-2 text-lg mobile-nav-link"
+          >Contact</a
+        >
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="min-h-screen flex items-center relative overflow-hidden"
+    >
+      <canvas id="hero-canvas" class="hero-bg"></canvas>
+      <div class="container mx-auto px-6 text-center relative z-10">
+        <h1 class="text-5xl md:text-7xl font-bold mb-6" data-aos="fade-up">
+          <span style="color: var(--text-primary)">Shivam Jha</span>
+        </h1>
+        <div
+          class="text-xl md:text-2xl mb-8"
+          style="color: var(--text-secondary)"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          <span id="typing-text" class="typing-animation"
+            >Founder & CEO of ThunderGit</span
+          >
+        </div>
+        <p
+          class="text-lg md:text-xl mb-12 max-w-3xl mx-auto"
+          style="color: var(--text-tertiary)"
+          data-aos="fade-up"
+          data-aos-delay="400"
+        >
+          Transforming the world of version control and collaborative
+          development. Building the future of code collaboration, one commit at
+          a time.
+        </p>
+        <div
+          class="flex flex-col sm:flex-row gap-4 justify-center"
+          data-aos="fade-up"
+          data-aos-delay="600"
+        >
+          <a href="#projects">
+            <button
+              class="px-8 py-4 rounded-lg font-semibold hover:opacity-90 transition-opacity"
+              style="background-color: var(--accent); color: var(--bg-primary)"
+            >
+              Explore My Work
+            </button>
+          </a>
+
+          <a href="#contact">
+            <button
+              class="px-8 py-4 border rounded-lg font-semibold hover:opacity-90 transition-opacity"
+              style="border-color: var(--accent); color: var(--accent)"
+              onmouseover="this.style.backgroundColor= 'var(--accent)'; this.style.color='var(--bg-primary)'; this.style.transform='scale(1.05)'"
+              onmouseout="this.style.backgroundColor='transparent'; this.style.color='var(--accent)'; this.style.transform='scale(1)'"
+            >
+              Get In Touch
+            </button>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section
+      id="about"
+      class="py-20"
+      style="background-color: var(--bg-secondary)"
+    >
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <h2 class="text-4xl font-bold mb-6">About Me</h2>
+          <div
+            class="w-24 h-1 mx-auto"
+            style="background-color: var(--accent)"
+          ></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+          <!-- Image Section with simple border and subtle shadow -->
+          <div data-aos="fade-right">
+            <div
+              class="w-80 h-80 mx-auto rounded-full flex items-center justify-center overflow-hidden shadow-lg border-4"
+              style="
+                background-color: var(--bg-tertiary);
+                border-color: #fff;
+                box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s cubic-bezier(0.4, 2, 0.6, 1);
+              "
+              onmouseover="this.style.transform='scale(1.05)'"
+              onmouseout="this.style.transform='scale(1)'"
+            >
+              <img
+                src="shivam.png"
+                alt="Shivam Jha"
+                class="w-full h-full object-cover rounded-full"
+                loading="lazy"
+              />
+            </div>
+            <div class="text-center mt-6">
+              <span
+                class="inline-block px-4 py-2 rounded-full font-semibold text-sm"
+                style="
+                  background: var(--bg-tertiary);
+                  color: var(--text-primary);
+                  border: 1px solid #fff;
+                "
+              >
+                Founder & CEO, ThunderGit
+              </span>
+            </div>
+          </div>
+          <!-- ...existing right content... -->
+
+          <div data-aos="fade-left">
+            <h3 class="text-3xl font-bold mb-6">
+              Tech Visionary & Entrepreneur
+            </h3>
+            <p
+              class="text-lg mb-6 leading-relaxed"
+              style="color: var(--text-secondary)"
+            >
+              As the founder and CEO of ThunderGit, I'm passionate about
+              revolutionizing how developers collaborate and manage their code.
+              With years of experience in software development and
+              entrepreneurship, I've built ThunderGit to solve real problems
+              that developers face every day.
+            </p>
+            <p
+              class="text-lg mb-8 leading-relaxed"
+              style="color: var(--text-secondary)"
+            >
+              My mission is to make version control more intuitive,
+              collaborative, and powerful than ever before. I believe in the
+              power of open source and building tools that empower developers
+              worldwide.
+            </p>
+
+            <div class="grid grid-cols-2 gap-6">
+              <div>
+                <div class="text-3xl font-bold">5+</div>
+                <div style="color: var(--text-tertiary)">Years Experience</div>
+              </div>
+              <div>
+                <div class="text-3xl font-bold">50K+</div>
+                <div style="color: var(--text-tertiary)">Active Users</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="py-20" style="background-color: var(--bg-primary)">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <h2 class="text-4xl font-bold mb-6">Skills & Expertise</h2>
+          <div
+            class="w-24 h-1 mx-auto"
+            style="background-color: var(--accent)"
+          ></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div
+            class="glass-effect p-8 rounded-lg hover-lift"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="text-4xl mb-4">🚀</div>
+            <h3 class="text-xl font-bold mb-4">Product Strategy</h3>
+            <p style="color: var(--text-secondary)" class="mb-4">
+              Building products that solve real problems and scale to millions
+              of users.
+            </p>
+            <div class="progress-bar">
+              <div class="progress-fill" data-width="95%"></div>
+            </div>
+          </div>
+
+          <div
+            class="glass-effect p-8 rounded-lg hover-lift"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="text-4xl mb-4">💻</div>
+            <h3 class="text-xl font-bold mb-4">Full-Stack Development</h3>
+            <p style="color: var(--text-secondary)" class="mb-4">
+              Expert in modern web technologies, cloud architecture, and
+              scalable systems.
+            </p>
+            <div class="progress-bar">
+              <div class="progress-fill" data-width="90%"></div>
+            </div>
+          </div>
+
+          <div
+            class="glass-effect p-8 rounded-lg hover-lift"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="text-4xl mb-4">👥</div>
+            <h3 class="text-xl font-bold mb-4">Team Leadership</h3>
+            <p style="color: var(--text-secondary)" class="mb-4">
+              Leading high-performance teams and fostering innovation culture.
+            </p>
+            <div class="progress-bar">
+              <div class="progress-fill" data-width="85%"></div>
+            </div>
+          </div>
+
+          <div
+            class="glass-effect p-8 rounded-lg hover-lift"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <div class="text-4xl mb-4">🎯</div>
+            <h3 class="text-xl font-bold mb-4">Business Strategy</h3>
+            <p style="color: var(--text-secondary)" class="mb-4">
+              Strategic planning, market analysis, and growth hacking expertise.
+            </p>
+            <div class="progress-bar">
+              <div class="progress-fill" data-width="88%"></div>
+            </div>
+          </div>
+
+          <div
+            class="glass-effect p-8 rounded-lg hover-lift"
+            data-aos="fade-up"
+            data-aos-delay="500"
+          >
+            <div class="text-4xl mb-4">🔧</div>
+            <h3 class="text-xl font-bold mb-4">DevOps & Infrastructure</h3>
+            <p style="color: var(--text-secondary)" class="mb-4">
+              CI/CD, containerization, and cloud-native architecture specialist.
+            </p>
+            <div class="progress-bar">
+              <div class="progress-fill" data-width="82%"></div>
+            </div>
+          </div>
+
+          <div
+            class="glass-effect p-8 rounded-lg hover-lift"
+            data-aos="fade-up"
+            data-aos-delay="600"
+          >
+            <div class="text-4xl mb-4">🎨</div>
+            <h3 class="text-xl font-bold mb-4">UI/UX Design</h3>
+            <p style="color: var(--text-secondary)" class="mb-4">
+              Creating intuitive and beautiful user experiences that delight
+              users.
+            </p>
+            <div class="progress-bar">
+              <div class="progress-fill" data-width="78%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section
+      id="projects"
+      class="py-20"
+      style="background-color: var(--bg-secondary)"
+    >
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <h2 class="text-4xl font-bold mb-6">Featured Projects</h2>
+          <div
+            class="w-24 h-1 mx-auto"
+            style="background-color: var(--accent)"
+          ></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div
+            class="rounded-lg overflow-hidden hover-lift transform hover:scale-105 transition-all duration-300"
+            style="background-color: var(--bg-tertiary)"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div
+              class="h-48 flex items-center justify-center"
+              style="background-color: var(--bg-primary)"
+            >
+              <div class="text-6xl">⚡</div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-2xl font-bold mb-3">ThunderGit</h3>
+              <p class="mb-4" style="color: var(--text-secondary)">
+                Next-generation version control platform with advanced
+                collaboration features and lightning-fast performance.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="px-3 py-1 text-xs rounded-full"
+                  style="background-color: var(--bg-primary)"
+                  >Git</span
+                >
+                <span
+                  class="px-3 py-1 text-xs rounded-full"
+                  style="background-color: var(--bg-primary)"
+                  >Node.js</span
+                >
+                <span
+                  class="px-3 py-1 text-xs rounded-full"
+                  style="background-color: var(--bg-primary)"
+                  >React</span
+                >
+              </div>
+          
+            </div>
+          </div>
+
+          <div
+            class="rounded-lg overflow-hidden hover-lift transform hover:scale-105 transition-all duration-300"
+            style="background-color: var(--bg-tertiary)"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div
+              class="h-48 flex items-center justify-center"
+              style="background-color: var(--bg-primary)"
+            >
+              <div class="text-6xl">🚀</div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-2xl font-bold mb-3">CodeFlow</h3>
+              <p class="mb-4" style="color: var(--text-secondary)">
+                AI-powered code review and optimization tool that helps teams
+                write better code faster.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="px-3 py-1 text-xs rounded-full"
+                  style="background-color: var(--bg-primary)"
+                  >Python</span
+                >
+                <span
+                  class="px-3 py-1 text-xs rounded-full"
+                  style="background-color: var(--bg-primary)"
+                  >AI/ML</span
+                >
+                <span
+                  class="px-3 py-1 text-xs rounded-full"
+                  style="background-color: var(--bg-primary)"
+                  >Docker</span
+                >
+              </div>
+           
+            </div>
+          </div>
+
+          <div
+            class="rounded-lg overflow-hidden hover-lift transform hover:scale-105 transition-all duration-300"
+            style="background-color: var(--bg-tertiary)"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div
+              class="h-48 flex items-center justify-center"
+              style="background-color: var(--bg-primary)"
+            >
+              <div class="text-6xl">🌟</div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-2xl font-bold mb-3">DevTools Suite</h3>
+              <p class="mb-4" style="color: var(--text-secondary)">
+                Comprehensive developer toolkit with integrated testing,
+                deployment, and monitoring solutions.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="px-3 py-1 text-xs rounded-full"
+                  style="background-color: var(--bg-primary)"
+                  >Kubernetes</span
+                >
+                <span
+                  class="px-3 py-1 text-xs rounded-full"
+                  style="background-color: var(--bg-primary)"
+                  >Go</span
+                >
+                <span
+                  class="px-3 py-1 text-xs rounded-full"
+                  style="background-color: var(--bg-primary)"
+                  >GraphQL</span
+                >
+              </div>
+          
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section with Timeline -->
+    <section
+      class="py-20"
+      id="experience"
+      style="background-color: var(--bg-primary)"
+    >
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <h2 class="text-4xl font-bold mb-6">Work Experience</h2>
+          <div
+            class="w-24 h-1 mx-auto"
+            style="background-color: var(--accent)"
+          ></div>
+        </div>
+
+        <div class="relative">
+          <div
+            class="absolute left-4 top-0 bottom-0 w-0.5"
+            style="background-color: var(--bg-tertiary)"
+          ></div>
+
+          <div class="space-y-12">
+            <div class="relative pl-12 timeline-item" data-aos="fade-right">
+              <div
+                class="p-8 rounded-lg"
+                style="background-color: var(--bg-secondary)"
+              >
+                <div
+                  class="flex flex-col md:flex-row md:items-center md:justify-between mb-4"
+                >
+                  <div>
+                    <h3 class="text-2xl font-bold mb-2">Software Engineer</h3>
+                    <p class="font-medium" style="color: var(--text-secondary)">
+                      @ ThunderGit
+                    </p>
+                  </div>
+                  <p class="text-sm" style="color: var(--text-tertiary)">
+                    2023 - Present
+                  </p>
+                </div>
+                <p style="color: var(--text-secondary)">
+                  Built full-stack tools using Next.js, Firebase, and Tailwind.
+                  Boosted UI/UX and performance across the platform.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="relative pl-12 timeline-item"
+              data-aos="fade-right"
+              data-aos-delay="200"
+            >
+              <div
+                class="p-8 rounded-lg"
+                style="background-color: var(--bg-secondary)"
+              >
+                <div
+                  class="flex flex-col md:flex-row md:items-center md:justify-between mb-4"
+                >
+                  <div>
+                    <h3 class="text-2xl font-bold mb-2">Frontend Developer</h3>
+                    <p class="font-medium" style="color: var(--text-secondary)">
+                      @ CodeCraft
+                    </p>
+                  </div>
+                  <p class="text-sm" style="color: var(--text-tertiary)">
+                    2021 - 2023
+                  </p>
+                </div>
+                <p style="color: var(--text-secondary)">
+                  Created dynamic UIs using React & Tailwind. Collaborated with
+                  backend and design teams to deliver exceptional user
+                  experiences.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="relative pl-12 timeline-item"
+              data-aos="fade-right"
+              data-aos-delay="400"
+            >
+              <div
+                class="p-8 rounded-lg"
+                style="background-color: var(--bg-secondary)"
+              >
+                <div
+                  class="flex flex-col md:flex-row md:items-center md:justify-between mb-4"
+                >
+                  <div>
+                    <h3 class="text-2xl font-bold mb-2">Intern Developer</h3>
+                    <p class="font-medium" style="color: var(--text-secondary)">
+                      @ DevInterns
+                    </p>
+                  </div>
+                  <p class="text-sm" style="color: var(--text-tertiary)">
+                    2020 - 2021
+                  </p>
+                </div>
+                <p style="color: var(--text-secondary)">
+                  Worked on real-world web applications, learned HTML/CSS, Git,
+                  and deployment workflows in professional environment.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section
+      id="testimonials"
+      class="py-20"
+      style="background-color: var(--bg-secondary)"
+    >
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <h2 class="text-4xl font-bold mb-6">What People Say</h2>
+          <div
+            class="w-24 h-1 mx-auto"
+            style="background-color: var(--accent)"
+          ></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div
+            class="glass-effect p-8 rounded-lg"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="mb-4">
+              <div class="flex text-yellow-400">⭐⭐⭐⭐⭐</div>
+            </div>
+            <p class="mb-6 italic" style="color: var(--text-secondary)">
+              "Shivam's vision for ThunderGit has completely transformed our
+              development workflow. The platform is intuitive and powerful."
+            </p>
+            <div class="flex items-center">
+              <div
+                class="w-12 h-12 rounded-full flex items-center justify-center mr-4"
+                style="background-color: var(--bg-tertiary)"
+              >
+                👨‍💼
+              </div>
+              <div>
+                <div class="font-semibold">Alex Chen</div>
+                <div class="text-sm" style="color: var(--text-tertiary)">
+                  CTO, TechCorp
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="glass-effect p-8 rounded-lg"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="mb-4">
+              <div class="flex text-yellow-400">⭐⭐⭐⭐⭐</div>
+            </div>
+            <p class="mb-6 italic" style="color: var(--text-secondary)">
+              "Working with Shivam has been incredible. His technical expertise
+              and leadership skills are unmatched in the industry."
+            </p>
+            <div class="flex items-center">
+              <div
+                class="w-12 h-12 rounded-full flex items-center justify-center mr-4"
+                style="background-color: var(--bg-tertiary)"
+              >
+                👩‍💻
+              </div>
+              <div>
+                <div class="font-semibold">Sarah Johnson</div>
+                <div class="text-sm" style="color: var(--text-tertiary)">
+                  Lead Developer, StartupX
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="glass-effect p-8 rounded-lg"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="mb-4">
+              <div class="flex text-yellow-400">⭐⭐⭐⭐⭐</div>
+            </div>
+            <p class="mb-6 italic" style="color: var(--text-secondary)">
+              "ThunderGit has revolutionized our team's collaboration. Shivam's
+              product vision is exactly what the developer community needed."
+            </p>
+            <div class="flex items-center">
+              <div
+                class="w-12 h-12 rounded-full flex items-center justify-center mr-4"
+                style="background-color: var(--bg-tertiary)"
+              >
+                👨‍🔬
+              </div>
+              <div>
+                <div class="font-semibold">Michael Rodriguez</div>
+                <div class="text-sm" style="color: var(--text-tertiary)">
+                  Engineering Manager, DevFlow
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section
+      id="blog"
+      class="py-20"
+      style="background-color: var(--bg-primary)"
+    >
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <h2 class="text-4xl font-bold mb-6">Latest Blog Posts</h2>
+          <div
+            class="w-24 h-1 mx-auto"
+            style="background-color: var(--accent)"
+          ></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <article
+            class="rounded-lg overflow-hidden hover-lift"
+            style="background-color: var(--bg-secondary)"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div
+              class="h-48 flex items-center justify-center"
+              style="background-color: var(--bg-tertiary)"
+            >
+              <div class="text-4xl">📝</div>
+            </div>
+            <div class="p-6">
+              <div class="text-sm mb-2" style="color: var(--text-tertiary)">
+                Dec 15, 2024
+              </div>
+              <h3 class="text-xl font-bold mb-3">
+                The Future of Version Control
+              </h3>
+              <p class="mb-4" style="color: var(--text-secondary)">
+                Exploring how AI and machine learning will revolutionize code
+                collaboration and version control systems.
+              </p>
+            
+            </div>
+          </article>
+
+          <article
+            class="rounded-lg overflow-hidden hover-lift"
+            style="background-color: var(--bg-secondary)"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div
+              class="h-48 flex items-center justify-center"
+              style="background-color: var(--bg-tertiary)"
+            >
+              <div class="text-4xl">🚀</div>
+            </div>
+            <div class="p-6">
+              <div class="text-sm mb-2" style="color: var(--text-tertiary)">
+                Dec 10, 2024
+              </div>
+              <h3 class="text-xl font-bold mb-3">
+                Building Scalable Developer Tools
+              </h3>
+              <p class="mb-4" style="color: var(--text-secondary)">
+                Lessons learned from scaling ThunderGit to serve 50,000+
+                developers worldwide.
+              </p>
+             
+            </div>
+          </article>
+
+          <article
+            class="rounded-lg overflow-hidden hover-lift"
+            style="background-color: var(--bg-secondary)"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div
+              class="h-48 flex items-center justify-center"
+              style="background-color: var(--bg-tertiary)"
+            >
+              <div class="text-4xl">💡</div>
+            </div>
+            <div class="p-6">
+              <div class="text-sm mb-2" style="color: var(--text-tertiary)">
+                Dec 5, 2024
+              </div>
+              <h3 class="text-xl font-bold mb-3">
+                Startup Lessons: From Idea to Product
+              </h3>
+              <p class="mb-4" style="color: var(--text-secondary)">
+                My journey of building ThunderGit from a simple idea to a
+                thriving platform used by developers globally.
+              </p>
+            
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-16" style="background-color: var(--bg-secondary)">
+      <div class="container mx-auto px-6">
+        <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
+          <h2 class="text-3xl font-bold mb-4">Stay Updated</h2>
+          <p class="text-lg mb-8" style="color: var(--text-secondary)">
+            Get the latest insights on tech, entrepreneurship, and product
+            development delivered to your inbox.
+          </p>
+          <form
+            class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto"
+            id="newsletter-form"
+          >
+            <input
+              type="email"
+              placeholder="Enter your email"
+              class="flex-1 p-4 rounded-lg border focus:outline-none"
+              style="
+                background-color: var(--bg-primary);
+                border-color: var(--bg-tertiary);
+                color: var(--text-primary);
+              "
+              required
+            />
+            <button
+              type="submit"
+              class="px-8 py-4 rounded-lg font-semibold hover:opacity-90 transition-opacity"
+              style="background-color: var(--accent); color: var(--bg-primary)"
+            >
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section
+      id="contact"
+      class="py-20"
+      style="background-color: var(--bg-primary)"
+    >
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <h2 class="text-4xl font-bold mb-6">Let's Connect</h2>
+          <div
+            class="w-24 h-1 mx-auto"
+            style="background-color: var(--accent)"
+          ></div>
+          <p
+            class="text-xl mt-6 max-w-2xl mx-auto"
+            style="color: var(--text-secondary)"
+          >
+            Have an exciting project in mind? Want to collaborate or just chat
+            about tech? I'd love to hear from you!
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+          <div class="space-y-8" data-aos="fade-right">
+            <div class="flex items-center space-x-4">
+              <div
+                class="w-12 h-12 rounded-lg flex items-center justify-center"
+                style="background-color: var(--bg-secondary)"
+              >
+                <span class="text-xl">📧</span>
+              </div>
+              <div>
+                <div class="font-semibold">Email</div>
+                <div style="color: var(--text-tertiary)">
+                  shivam@thundergit.com
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center space-x-4">
+              <div
+                class="w-12 h-12 rounded-lg flex items-center justify-center"
+                style="background-color: var(--bg-secondary)"
+              >
+                <span class="text-xl">🐦</span>
+              </div>
+              <div>
+                <div class="font-semibold">Twitter</div>
+                <div style="color: var(--text-tertiary)">@shivamjha_dev</div>
+              </div>
+            </div>
+            <div class="flex items-center space-x-4">
+              <div
+                class="w-12 h-12 rounded-lg flex items-center justify-center"
+                style="background-color: var(--bg-secondary)"
+              >
+                <span class="text-xl">💼</span>
+              </div>
+              <div>
+                <div class="font-semibold">LinkedIn</div>
+                <div style="color: var(--text-tertiary)">/in/shivamjha</div>
+              </div>
+            </div>
+            <div class="flex items-center space-x-4">
+              <div
+                class="w-12 h-12 rounded-lg flex items-center justify-center"
+                style="background-color: var(--bg-secondary)"
+              >
+                <span class="text-xl">⚡</span>
+              </div>
+              <div>
+                <div class="font-semibold">ThunderGit</div>
+                <div style="color: var(--text-tertiary)">thundergit.com</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div data-aos="fade-left">
+            <form class="space-y-6" id="contact-form">
+              <div>
+                <input
+                  type="text"
+                  placeholder="Your Name"
+                  class="w-full p-4 rounded-lg border focus:outline-none"
+                  style="
+                    background-color: var(--bg-secondary);
+                    border-color: var(--bg-tertiary);
+                    color: var(--text-primary);
+                  "
+                  required
+                />
+              </div>
+              <div>
+                <input
+                  type="email"
+                  placeholder="Your Email"
+                  class="w-full p-4 rounded-lg border focus:outline-none"
+                  style="
+                    background-color: var(--bg-secondary);
+                    border-color: var(--bg-tertiary);
+                    color: var(--text-primary);
+                  "
+                  required
+                />
+              </div>
+              <div>
+                <textarea
+                  rows="5"
+                  placeholder="Your Message"
+                  class="w-full p-4 rounded-lg border focus:outline-none resize-none"
+                  style="
+                    background-color: var(--bg-secondary);
+                    border-color: var(--bg-tertiary);
+                    color: var(--text-primary);
+                  "
+                  required
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="w-full py-4 rounded-lg font-semibold hover:opacity-90 transition-opacity"
+                style="
+                  background-color: var(--accent);
+                  color: var(--bg-primary);
+                "
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+      class="py-12 border-t"
+      style="
+        background-color: var(--bg-secondary);
+        border-color: var(--bg-tertiary);
+      "
+    >
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="mb-4 md:mb-0">
+            <div class="text-xl font-bold">
+              Shivam<span style="color: var(--text-tertiary)">.dev</span>
+            </div>
+            <div class="mt-2" style="color: var(--text-tertiary)">
+              Founder & CEO, ThunderGit
+            </div>
+          </div>
+          <div class="flex space-x-6">
+            <a
+              href="#"
+              class="hover:opacity-70 transition-opacity"
+              style="color: var(--text-tertiary)"
+              >Privacy</a
+            >
+            <a
+              href="#"
+              class="hover:opacity-70 transition-opacity"
+              style="color: var(--text-tertiary)"
+              >Terms</a
+            >
+            <a
+              href="#"
+              class="hover:opacity-70 transition-opacity"
+              style="color: var(--text-tertiary)"
+              >Support</a
+            >
+          </div>
+        </div>
+        <div
+          class="mt-8 pt-8 border-t text-center"
+          style="border-color: var(--bg-tertiary); color: var(--text-tertiary)"
+        >
+          <p>
+            &copy; 2024 Shivam Jha. Built with passion and innovation. All
+            rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Floating Chat Widget -->
+    <div class="floating-chat">
+      <button
+        id="chat-toggle"
+        class="w-16 h-16 rounded-full shadow-lg flex items-center justify-center hover:scale-110 transition-transform"
+        style="background-color: var(--accent); color: var(--bg-primary)"
+      >
+        <svg
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+          ></path>
+        </svg>
+      </button>
+
+      <div
+        id="chat-popup"
+        class="hidden absolute bottom-20 right-0 w-80 h-96 rounded-lg shadow-xl overflow-hidden"
+        style="background-color: var(--bg-secondary)"
+      >
+        <div
+          class="p-4 border-b"
+          style="
+            background-color: var(--bg-primary);
+            border-color: var(--bg-tertiary);
+          "
+        >
+          <div class="flex justify-between items-center">
+            <h3 class="font-bold">Chat with Shivam</h3>
+            <button id="chat-close" class="text-gray-400 hover:text-white">
+              <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="p-4 h-64 overflow-y-auto" id="chat-messages">
+          <div class="mb-4">
+            <div
+              class="p-3 rounded-lg max-w-xs"
+              style="background-color: var(--bg-tertiary)"
+            >
+              <p class="text-sm">Hi! I'm Shivam. How can I help you today?</p>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 border-t" style="border-color: var(--bg-tertiary)">
+          <div class="flex space-x-2">
+            <input
+              type="text"
+              placeholder="Type your message..."
+              class="flex-1 p-2 rounded border text-sm focus:outline-none"
+              style="
+                background-color: var(--bg-primary);
+                border-color: var(--bg-tertiary);
+                color: var(--text-primary);
+              "
+              id="chat-input"
+            />
+            <button
+              id="chat-send"
+              class="px-4 py-2 rounded text-sm font-medium"
+              style="background-color: var(--accent); color: var(--bg-primary)"
+            >
+              Send
+            </button>
+          </div>
+        </div>
+      </div>
+    </div> 
+
+    <!-- Notification -->
+    <div
+      id="notification"
+      class="notification glass-effect p-4 rounded-lg shadow-lg max-w-sm"
+    >
+      <div class="flex items-center space-x-3">
+        <div class="flex-shrink-0">
+          <svg
+            class="w-6 h-6 text-green-400"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M5 13l4 4L19 7"
+            ></path>
+          </svg>
+        </div>
+        <div>
+          <p class="font-medium">Success!</p>
+          <p class="text-sm" style="color: var(--text-secondary)">
+            Your message has been sent.
+          </p>
+        </div>
+      </div>
+    </div>
+
+   <script src="shivam.js"></script>
+  </body>
+</html>
